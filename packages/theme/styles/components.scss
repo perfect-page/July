@@ -2564,3 +2564,13 @@
 
   .hideOnDrag { opacity: 0 !important; }
 }
+
+/* ---------------- Mobile overrides for touch targets ---------------- */
+@include respond-max(sm) {
+  // Ensure header buttons are at least 44×44 logical pixels
+  .hulyHeader-button {
+    width: rem(44px);
+    height: rem(44px);
+    line-height: rem(44px);
+  }
+}

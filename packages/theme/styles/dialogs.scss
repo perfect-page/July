@@ -372,3 +372,11 @@
     border-radius: 0 0 .5rem .5rem;
   }
 }
+
+/* ---------------- Mobile overrides for touch targets ---------------- */
+@include respond-max(sm) {
+  .antiCard-menu__item {
+    min-height: rem(44px);
+    padding: rem(8px) rem(12px);
+  }
+}
