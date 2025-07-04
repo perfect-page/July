@@ -1,0 +1,47 @@
+// Responsive overrides and helpers
+
+@import "./breakpoints.scss";
+@import "./_utils.scss";
+
+/* Mobile (≤ md = 768px) adjustments */
+@include respond-max(md) {
+  /* Ensure generic buttons are large enough */
+  .hulyButton,
+  button,
+  .hulyHeader-button {
+    min-width: rem(44px);
+    min-height: rem(44px);
+  }
+
+  /* Stack common row flex containers */
+  .flex-row-center,
+  .flex-row-baseline,
+  .flex-row-top,
+  .flex-between,
+  .flex-row-reverse {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* Tables: enable horizontal scrolling on small screens */
+  .antiTable {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+
+    th,
+    td {
+      padding: rem(8px) rem(12px);
+      white-space: nowrap;
+    }
+
+    .antiTable-body__row { height: auto; }
+  }
+
+  /* Panels/sections stack */
+  .hulyPanels-container,
+  .workbench-container.inner {
+    flex-direction: column;
+  }
+}
