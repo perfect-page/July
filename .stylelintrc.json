@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "rules": {
+    "unit-disallowed-list": [
+      ["px"],
+      {
+        "ignoreProperties": {
+          "px": [
+            "border",
+            "border-top",
+            "border-right",
+            "border-bottom",
+            "border-left",
+            "box-shadow",
+            "text-shadow"
+          ]
+        },
+        "ignoreFunctions": ["rem"],
+        "ignoreNumericRanges": [[0, 0], [0, 1]]
+      }
+    ]
+  }
+}
