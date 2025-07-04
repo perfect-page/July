@@ -1,0 +1,13 @@
+// Utility functions and mixins
+
+// Base font size for rem conversion
+$rem-base: 16px;
+
+/// Convert px units to rem units.
+/// Example: width: rem(24px) -> width: 1.5rem;
+@function rem($px-value) {
+  @if unitless($px-value) {
+    $px-value: $px-value * 1px;
+  }
+  @return ($px-value / $rem-base) * 1rem;
+}
