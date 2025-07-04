@@ -212,7 +212,7 @@
 /* Avatar sizes */
 .hulyAvatarSize-xx-small {
   width: .75rem; // 12 - 10
-  .small-font & { width: 10px; }
+  .small-font & { width: .625rem; } // 10px → 0.625rem
 
   .ava-text { font-size: .375rem; }
 }

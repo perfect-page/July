@@ -97,7 +97,7 @@ select:-webkit-autofill:focus {
   select,
   textarea,
   input,
-  div.ref-container div.select-text > div[contenteditable="true"] { font-size: 16px; }
+  div.ref-container div.select-text > div[contenteditable="true"] { font-size: 1rem; }
 }
 
 table, caption, tbody, tfoot, thead, tr, th, td {
@@ -806,8 +806,8 @@ input.search {
   height: .75rem;
 }
 .svg-16px {
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
 }
 .svg-inline {
   width: 1em;
@@ -893,7 +893,7 @@ a.no-line {
   color: var(--theme-dark-color);
   user-select: none;
 }
-.text-16px { font-size: 16px; }
+.text-16px { font-size: 1rem; }
 .text-xs { font-size: .625rem; }
 .text-11px { font-size: .6875rem; }
 .text-sm { font-size: .75rem; }
@@ -914,10 +914,10 @@ a.no-line {
 .text-left { text-align: left; }
 .text-right { text-align: right !important; }
 .text-center { text-align: center; }
-.leading-16px { line-height: 16px; }
+.leading-16px { line-height: 1rem; }
 .leading-3 { line-height: .75rem; }
-.tracking--05px { letter-spacing: -.5px; }
-.tracking-1px { letter-spacing: 1px; }
+.tracking--05px { letter-spacing: -.03125rem; }
+.tracking-1px { letter-spacing: .0625rem; }
 .text-balance { text-wrap: balance; }
 
 .over-underline {
