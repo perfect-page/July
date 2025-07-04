@@ -1,0 +1,37 @@
+// Standard breakpoint definitions and mixins for responsive design
+// sm: 640px, md: 768px, lg: 1024px, xl: 1280px
+
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+// Usage:
+// .selector {
+//   @include respond-max(sm) { ... }
+//   @include respond-min(md) { ... }
+// }
+
+// Media-query max-width helper – mobile-first (applies up to the size)
+@mixin respond-max($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (max-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint `#{$size}`. Available: #{map-keys($breakpoints)}";
+  }
+}
+
+// Media-query min-width helper – desktop-first (applies from the size)
+@mixin respond-min($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  } @else {
+    @warn "Unknown breakpoint `#{$size}`. Available: #{map-keys($breakpoints)}";
+  }
+}
